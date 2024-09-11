@@ -6,7 +6,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,7 +33,7 @@ body {
 
 
 .formulario-layout {
-    padding: 200px;
+    padding: 255px;
     width: 60%; 
     display: flex;
     flex-direction: column;
@@ -45,7 +44,7 @@ body {
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #333;
+    color: #003b1e;
     text-align: center;
 }
 
@@ -82,3 +81,12 @@ button {
 button:hover {
     background-color: #88a564;
 }
+
+.links {
+    margin-top: 32px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
