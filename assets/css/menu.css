@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.header {
+    background-color: #b0d0a0;
+    text-align: center;
+    padding: 33px;
+}
+
+.header img {
+    width: 500px;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem {
+    text-align: center;
+    font-weight: 700;
+    margin: 100px;
+    margin-top: 150px;
+    font-size: 18px;
+    color: #333;
+}
+
+.imagem img {
+    width: 275px;
+    height: 220px;
+    background-color: #448b46;
+    padding: 45px;
+    border-radius: 10px;
+}
+
