@@ -9,6 +9,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+   
 }
 
 .layout {
@@ -21,14 +22,14 @@ body {
     background-color: #b0d0a0;
     padding: 30px;
     text-align: center;
-    width: 40%; 
+    width: 35%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .logo img {
-    width: 660px;
+    width: 100%;
 }
 
 
@@ -88,5 +89,3 @@ button:hover {
     text-align: center;
     font-weight: bold;
 }
-
-

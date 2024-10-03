@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.layout {
+    display: flex;
+    flex-grow: 1; 
+    height: 100vh;
+}
+
+.logo {
+    background-color: #b0d0a0;
+    padding: 30px;
+    text-align: center;
+    width: 25%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.form-container {
+    width: 75%;
+    padding: 80px;
+    background-color: #f8f7fc;
+}
+
+.tab {
+    display: flex;
+    border-bottom: 2px solid #c4c4c4;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #f8f7fc; 
+    color: #333; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #e1eddf; 
+    color: #333;
+    border-bottom: 2px solid #7db86d;
+    font-weight: bold;
+}
+
+.tab-button:hover {
+    background-color: hsla(0, 0%, 92%, 0.877);
+    color: #333;
+}
+
+.tab-content form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 35px;
+}
+
+.tab-content form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; 
+}
+
+#Fisica{
+    padding-top: 45px;
+
+}
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+input, select {
+    padding: 14px; 
+    border: 1px solid grey;
+    border-radius: 6px;
+    width: 90%; 
+}
+
+button {
+    padding: 14px; 
+    background-color: #9fbf7f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color: #88a564;
+}
+
+.submit{
+    width: 90%;
+}
+
+

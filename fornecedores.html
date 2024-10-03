@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroApp - Cadastro Fornecedor</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/folha.png"> 
+    <link rel="stylesheet" href="assets/css/fornecedor.css">
+</head>
+<body>
+        <div class="layout">
+            <div class="logo">
+                <a href="login.html"><img src="assets/img/logo_agroapp.png" alt="Logo da AgroApp" ></a>
+            </div>
+
+            <!--Botões Alternativos-->
+        <div class="form-container">
+            <div class="tab">
+                <button class="tab-button active" onclick="showForm('pessoaFisica')">Pessoa Física</button>
+                <button class="tab-button" onclick="showForm('pessoaJuridica')">Pessoa Jurídica</button>
+            </div>
+            <br><br><br>
+
+            <!--Formulário-->
+            <div class="tab-content" id="pessoaFisica">
+                <form id="Fisica">
+                    <div>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" required>
+                    </div>
+                    <div>
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" required>
+                    </div>
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label for="tipoFornecimento">Tipo Fornecimento:</label>
+                        <select id="tipoFornecimento" name="tipoFornecimento">
+                            <!-- FALTA PREENCHER AS OPÇÕES-->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" id="quantidade" name="quantidade" required>
+                    </div>
+                    .
+                    <button type="submit" class="submit">Finalizar</button>
+                </form>
+            </div>
+
+            <div class="tab-content" id="pessoaJuridica" style="display: none;">
+                <form>
+                    <div>
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpj" name="cnpj" required>
+                    </div>
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" required>
+                    </div>
+                    <div>
+                        <label for="razaoSocial">Razão Social:</label>
+                        <input type="text" id="razaoSocial" name="razaoSocial" required>
+                    </div>
+                    <div>
+                        <label for="unidadeFederativa">UF:</label>
+                        <input type="text" id="unidadeFederativa" name="unidadeFederativa" required>
+                    </div>
+                    <div>
+                        <label for="nomeFantasia">Nome Fantasia:</label>
+                        <input type="text" id="nomeFantasia" name="nomeFantasia" required>
+                    </div>
+                    <div>
+                        <label for="municipio">Município:</label>
+                        <input type="text" id="municipio" name="municipio" required>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                    </div>
+                    <div>
+                        <label for="tipoFornecimentoJuridico">Tipo Fornecimento:</label>
+                        <select id="tipoFornecimentoJuridico" name="tipoFornecimentoJuridico">
+                          <!-- FALTA PREENCHER AS OPÇOES ex(<option value="arroz">Arroz)-->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantidadeJuridico">Quantidade:</label>
+                        <input type="number" id="quantidadeJuridico" name="quantidadeJuridico">
+                    </div>
+                    .
+                    <button type="submit" class="submit">Finalizar</button>
+                </form>
+            </div>
+        </div>
+
+ <!--Função para troca dos formulários dentro da mesma página-->
+    <script>
+        function showForm(formId) {
+            document.getElementById('pessoaFisica').style.display = 'none';
+            document.getElementById('pessoaJuridica').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.querySelector('button[onclick="showForm(\'' + formId + '\')"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
