@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroApp - Visita Guiada</title>
+    <title>AgroApp - Visita</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/img/folha.png"> 
     <link rel="stylesheet" href="assets/css/visita.css">
 </head>
@@ -15,16 +15,16 @@
             <button class="botão-deslogar"><a href="login.html"><img src="assets/img/botao_sair.png"></a></button>
         </header>
 <br>
-        <div class="content">
+        <div class="texto">
             <h1>Conheça nossa fazenda urbana!</h1>
             <h2>Agende a sua visita conosco.</h2>
 <br>
             <div class="form-container">
                 <form>
                     <h2>Ingresso Solidário</h2>
-                    <p>Doação de 1kg de alimento não-perecível</p>
-                    <br><br>
-                    <label for="tipo-alimento">Tipo de Alimento</label>
+                    <h3>Doação de 1kg de alimento não-perecível</h3>
+                    <br>
+                    <label for="tipo-alimento"><h3>Tipo de Alimento:</h3></label>
                     <select id="tipo-alimento" name="tipo-alimento" required>
                         <option value=""></option>
                         <option value=""></option>
@@ -34,6 +34,7 @@
                 </form>
                 <form class="calendario">
                     <label for="data-visita">Selecione a data</label>
+                    <br>
                     <input type="date" id="data-visita" name="data-visita" required>
                     <button type="submit">Agendar</button>
                 </form>
