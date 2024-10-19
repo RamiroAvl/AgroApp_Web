@@ -24,7 +24,7 @@ header {
 }
 
 header img {
-    height: 250px;
+    height: 100%;
 }
 
 .botão-voltar, .botão-deslogar {

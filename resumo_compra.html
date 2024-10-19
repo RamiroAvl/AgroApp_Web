@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroApp - Resumo da Compra</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/img/folha.png"> 
+    <link rel="stylesheet" href="assets/css/vendaAlimento.css">
+</head>
+<body>
+    <div>
+        <header>
+            <button class="botão-voltar"><a href="venda_alimento.html"><img src="assets/img/botao_voltar.png"></a></button>
+            <img src="assets/img/logo_agroapp_wide.png" alt="AgroApp Logo">
+            <button class="botão-deslogar"><a href="login.html"><img src="assets/img/botao_sair.png"></a></button>
+        </header>
+<br>
+ <!-- Formulário -->
+ <form action="" method="">
+    <div class="container">
+        <h2 class="title">Resumo da compra</h2>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Itens</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <span class="icon">A</span> 
+                            <span>Item 1</span>
+                            <input type="hidden" name="item1" value="Item 1">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="preco" data-preco="100">100$</span>
+                        <input type="hidden" name="preco1" value="100">
+                        <input type="checkbox" name="item1_check" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <span class="icon">A</span> 
+                            <span>Item 2</span>
+                            <input type="hidden" name="item2" value="Item 2">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="preco" data-preco="200">200$</span>
+                        <input type="hidden" name="preco2" value="200">
+                        <input type="checkbox" name="item2_check" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <span class="icon">A</span> 
+                            <span>Item 3</span>
+                            <input type="hidden" name="item3" value="Item 3">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="preco" data-preco="150">150$</span>
+                        <input type="hidden" name="preco3" value="150">
+                        <input type="checkbox" name="item3_check" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <span class="icon">A</span> 
+                            <span>Item 4</span>
+                            <input type="hidden" name="item4" value="Item 4">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="preco" data-preco="250">250$</span>
+                        <input type="hidden" name="preco4" value="250">
+                        <input type="checkbox" name="item4_check" checked>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="item">
+                            <span class="icon">A</span> 
+                            <span>Item 5</span>
+                            <input type="hidden" name="item5" value="Item 5">
+                        </div>
+                    </td>
+                    <td>
+                        <span class="preco" data-preco="300">300$</span>
+                        <input type="hidden" name="preco5" value="300">
+                        <input type="checkbox" name="item5_check" checked>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total-container">
+            <h3>Total: <span id="total-price">0$</span></h3>
+        </div>
+    
+        <button type="submit" class="seguir">Finalizar</button>
+    </div>
+</form>
+</div>
+
+<script>
+function calcularTotal() {
+    let total = 0;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            // Pegar o preço associado ao checkbox
+            const precoElement = checkbox.closest('td').querySelector('.preco');
+            const preco = parseFloat(precoElement.getAttribute('data-preco'));
+            total += preco; // Adiciona ao total
+        }
+    });
+    document.getElementById('total-price').textContent = total + '$'; 
+}
+
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', calcularTotal);
+});
+
+
+window.onload = calcularTotal;
+</script>
+</body>
+</html>
