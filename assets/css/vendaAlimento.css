@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #b0d0a0;;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    height: 100%;
+}
+
+.botão-voltar, .botão-deslogar {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    
+}
+
+.botão-voltar img {
+    height: 85px;
+     
+ }
+ .botão-deslogar img {
+   height: 85px;
+    
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.paginas a, .paginas span {
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.paginas .active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+}
+
+button.seguir {
+    background-color: #4CAF50;
+    color: white;
+    padding: 13px 27px; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}

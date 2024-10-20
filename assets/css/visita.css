@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+}
+
+header {
+    background-color: #b0d0a0;;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    height: 100%;
+}
+
+.botão-voltar, .botão-deslogar {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    
+}
+
+.botão-voltar img {
+    height: 85px;
+     
+ }
+ .botão-deslogar img {
+   height: 85px;
+    
+}
+
+.texto {
+    text-align: center;
+    padding: 20px;
+}
+
+.texto h1 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.texto h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 35px;
+}
+.texto h3 {
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form {
+    text-align: left;
+    font-size: 30px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.calendario {
+    margin-left: 220px;
+    background-color: #c9c9dd69;
+    width: 25%;
+}
+
+.form-container form select, 
+.form-container form input[type="date"] {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #334969;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #A3C585;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #8bb770;
+}
+
