@@ -112,7 +112,7 @@ header img {
     }
 
     .botão-voltar img, .botão-deslogar img {
-        height: 50px; /* Ajusta o tamanho dos botões de voltar e deslogar */
+        height: 50px; 
     }
 
     .texto h1 {

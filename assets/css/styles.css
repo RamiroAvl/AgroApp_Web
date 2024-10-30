@@ -90,6 +90,7 @@ button:hover {
     font-weight: bold;
 }
 
+/* Responsividade apenas para mobile */
 @media (max-width: 768px) {
     .layout {
         flex-direction: column;

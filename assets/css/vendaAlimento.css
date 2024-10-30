@@ -160,7 +160,7 @@ button.seguir {
     
 
     button.seguir {
-        width: 100%; /* Botão de seguir ocupa toda a largura */
+        width: 100%; 
         padding: 10px;
         font-size: 16px;
         margin-top: 10px;
