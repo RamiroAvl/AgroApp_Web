@@ -17,30 +17,26 @@ body {
 }
 
 header {
-    background-color: #b0d0a0;;
+    background-color: #b0d0a0;
     padding: 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente os elementos */
 }
 
 header img {
-    height: 100%;
+    height: auto;
+    max-width: 500px; /* Limita o tamanho da logo em telas maiores */
 }
 
 .botão-voltar, .botão-deslogar {
     background-color: transparent;
     border: none;
     font-size: 24px;
-    
 }
 
-.botão-voltar img {
+.botão-voltar img, .botão-deslogar img {
     height: 85px;
-     
- }
- .botão-deslogar img {
-   height: 85px;
-    
 }
 
 .texto {
@@ -59,6 +55,7 @@ header img {
     font-weight: 500;
     font-size: 35px;
 }
+
 .texto h3 {
     margin-top: 10px;
     font-weight: 200;
@@ -108,3 +105,54 @@ header img {
     background-color: #8bb770;
 }
 
+/* Responsividade apenas para mobile */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .botão-voltar img, .botão-deslogar img {
+        height: 50px; /* Ajusta o tamanho dos botões de voltar e deslogar */
+    }
+
+    .texto h1 {
+        font-size: 30px;
+    }
+
+    .texto h2 {
+        font-size: 24px;
+    }
+
+    .texto h3 {
+        font-size: 16px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-container form {
+        width: 90%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .calendario {
+        margin-left: 0;
+        width: 100%;
+        background-color: #e0e0f5;
+        margin-top: 20px;
+    }
+
+    .form-container form select, 
+    .form-container form input[type="date"] {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .form-container button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
