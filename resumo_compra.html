@@ -10,9 +10,9 @@
 <body>
     <div>
         <header>
-            <button class="botão-voltar"><a href="venda_alimento.html"><img src="assets/img/botao_voltar.png"></a></button>
+            <button class="botão-voltar"><a href="venda_alimento.html" onclick="limparLocalStorage()"><img src="assets/img/botao_voltar.png"></a></button>
             <img src="assets/img/logo_agroapp_wide.png" alt="AgroApp Logo">
-            <button class="botão-deslogar"><a href="login.html"><img src="assets/img/botao_sair.png"></a></button>
+            <button class="botão-deslogar"><a href="index.html"><img src="assets/img/botao_sair.png"></a></button>
         </header>
 <br>
  <!-- Formulário -->
@@ -106,30 +106,17 @@
     
         <button type="submit" class="seguir">Finalizar</button>
     </div>
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modal-message"></p>
+                    <button id="modal-ok">OK</button>
+                </div>
+            </div>
 </form>
 </div>
 
-<script>
-function calcularTotal() {
-    let total = 0;
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-            // Pegar o preço associado ao checkbox
-            const precoElement = checkbox.closest('td').querySelector('.preco');
-            const preco = parseFloat(precoElement.getAttribute('data-preco'));
-            total += preco; // Adiciona ao total
-        }
-    });
-    document.getElementById('total-price').textContent = total + '$'; 
-}
-
-document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', calcularTotal);
-});
-
-
-window.onload = calcularTotal;
-</script>
+<script src="assets/scripts/resumoCompra.js"></script>
 </body>
 </html>
