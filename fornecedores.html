@@ -52,7 +52,7 @@
                     </div>
                     <div class="autorização">Ao clicar em "Finalizar" você concorda com o uso dos dados pessoais para <br> tratamento dos dados. </div>
                     
-                    <button type="submit" class="submit">Finalizar</button>
+                    <button type="submit" class="submit" onclick="enviarDadosPessoaFisica(event)">Finalizar</button>
                 </form>
             </div>
 
@@ -84,7 +84,7 @@
                     </div>
                     <div>
                         <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" required>
+                        <input type="tel" id="telefonePJ" name="telefone" required>
                     </div>
                     <div>
                         <label for="bairro">Bairro:</label>
@@ -101,25 +101,20 @@
                         <input type="number" id="quantidadeJuridico" name="quantidadeJuridico">
                     </div>
                     .
-                    <button type="submit" class="submit">Finalizar</button>
+                    <button type="submit" class="submit" onclick="enviarDadosPessoaJuridica(event)">Finalizar</button>
                 </form>
             </div>
         </div>
+                    <!-- Modal -->
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="modal-message"></p>
+                            <button id="modal-ok">OK</button>
+                        </div>
+                    </div>
 
  <!--Função para troca dos formulários dentro da mesma página-->
-    <script>
-        function showForm(formId) {
-            document.getElementById('pessoaFisica').style.display = 'none';
-            document.getElementById('pessoaJuridica').style.display = 'none';
-            document.getElementById(formId).style.display = 'block';
-
-            var buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(function(button) {
-                button.classList.remove('active');
-            });
-
-            document.querySelector('button[onclick="showForm(\'' + formId + '\')"]').classList.add('active');
-        }
-    </script>
+    <script src="assets/scripts/fornecedores.js"></script>
 </body>
 </html>
