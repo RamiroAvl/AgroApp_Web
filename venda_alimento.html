@@ -12,106 +12,37 @@
         <header>
             <button class="botão-voltar"><a href="menu_user.html"><img src="assets/img/botao_voltar.png"></a></button>
             <img src="assets/img/logo_agroapp_wide.png" alt="AgroApp Logo">
-            <button class="botão-deslogar"><a href="login.html"><img src="assets/img/botao_sair.png"></a></button>
+            <button class="botão-deslogar"><a href="index.html"><img src="assets/img/botao_sair.png"></a></button>
         </header>
-<br>
- <!-- Formulário -->
-<form action="" method="">
-    <div class="container">
-        <h2 class="title">Alimentos frescos para pronta entrega.</h2>
         <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>Itens</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="item">
-                            <span class="icon">A</span> 
-                            <span>List item</span>
-                            <input type="hidden" name="item1" value="List item">
-                        </div>
-                    </td>
-                    <td>
-                        <span>100$</span>
-                        <input type="hidden" name="preco1" value="100$">
-                        <input type="checkbox" name="item1_check">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="item">
-                            <span class="icon">A</span> 
-                            <span>List item</span>
-                            <input type="hidden" name="item2" value="List item">
-                        </div>
-                    </td>
-                    <td>
-                        <span>100$</span>
-                        <input type="hidden" name="preco2" value="100$">
-                        <input type="checkbox" name="item2_check">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="item">
-                            <span class="icon">A</span> 
-                            <span>List item</span>
-                            <input type="hidden" name="item3" value="List item">
-                        </div>
-                    </td>
-                    <td>
-                        <span>100$</span>
-                        <input type="hidden" name="preco3" value="100$">
-                        <input type="checkbox" name="item3_check">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="item">
-                            <span class="icon">A</span> 
-                            <span>List item</span>
-                            <input type="hidden" name="item4" value="List item">
-                        </div>
-                    </td>
-                    <td>
-                        <span>100$</span>
-                        <input type="hidden" name="preco4" value="100$">
-                        <input type="checkbox" name="item4_check">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="item">
-                            <span class="icon">A</span> 
-                            <span>List item</span>
-                            <input type="hidden" name="item5" value="List item">
-                        </div>
-                    </td>
-                    <td>
-                        <span>100$</span>
-                        <input type="hidden" name="preco5" value="100$">
-                        <input type="checkbox" name="item5_check">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Formulário -->
+        <form action="" method="" id="vendaAlimentoForm">
+            <div class="container">
+                <h2 class="title">Alimentos frescos para pronta entrega.</h2>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Itens</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alimentos-lista">
+                        <!-- Os itens serão adicionados aqui via JavaScript -->
+                    </tbody>
+                </table>
 
-        <div class="paginas">
-            <a href="#">Previous</a>
-            <a class="active" href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">Next</a>
-        </div>
+                <!-- Navegação de páginas -->
+                <div class="paginas" style="display:none;">
+                    <!-- Links de página serão inseridos aqui via JavaScript -->
+                </div>
 
-        <button type="submit" class="seguir"><a href="resumo_compra.html" style="text-decoration: none; color: white;">Seguir</a></button>
+                <button type="submit" class="seguir"><a href="resumo_compra.html" style="text-decoration: none; color: white;">Seguir</a></button>
+            </div>
+        </form>
     </div>
-</form>
-    </div>
+
+    <!-- Referência ao arquivo JS -->
+    <script src="assets/scripts/vendaAlimento.js"></script>
 </body>
 </html>
